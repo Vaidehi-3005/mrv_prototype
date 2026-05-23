@@ -12,10 +12,12 @@ import Footer from './components/Footer/Footer';
 import ScrollToTopButton from './components/ScrollToTopButton/ScrollToTopButton';
 import VirtualTour from './components/360View/VirtualTour';
 import ProjectPage from './pages/ProjectPage/ProjectPage';
+import ScrollToTop from './components/ScrollToTop/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <ScrollToTopButton />
 
       <Routes>
