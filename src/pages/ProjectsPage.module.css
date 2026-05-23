@@ -1,0 +1,391 @@
+/* 
+   PAGE LAYOUT & CONTAINERS
+    */
+.pageContainer {
+  width: 100%;
+  padding-top: 80px; /* Navbar ke liye space */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.archiveContainer { 
+  max-width: 900px; 
+  margin: 0 auto;
+}
+
+/* 
+   SECTION 1: PROJECTS DIRECTORY
+    */
+.directorySection { 
+  padding: 80px 20px; 
+  background-color: #fcfcfc; 
+}
+
+.header { 
+  text-align: center; 
+  margin-bottom: 40px; 
+}
+
+.header h2 { 
+  font-size: 3rem; 
+  font-weight: 700;
+  color: #111; 
+  margin: 0 0 10px 0; 
+  letter-spacing: -1px;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.filterDeck { 
+  background: white; 
+  padding: 20px 30px; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.04); 
+  margin-bottom: 50px; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+}
+
+.filterGroup { 
+  display: flex; 
+  align-items: center; 
+  flex-wrap: wrap; 
+  gap: 15px; 
+}
+
+.filterLabel { 
+  font-weight: 600; 
+  width: 90px; 
+  color: #111;
+}
+
+.btnGroup { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+}
+
+.filterBtn { 
+  padding: 8px 22px; 
+  border: 1px solid #eaeaea; 
+  background: white; 
+  color: #555;
+  border-radius: 50px; 
+  cursor: pointer; 
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.filterBtn:hover { 
+  border-color: #dfa135; 
+  color: #dfa135; 
+  transform: translateY(-2px); 
+  box-shadow: 0 4px 12px rgba(223, 161, 53, 0.15); 
+}
+
+.filterBtn.active { 
+  background: #111; 
+  color: white; 
+  border-color: #111; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.projectsGrid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+  gap: 30px; 
+}
+
+.projectCard { 
+  background: white; 
+  border-radius: 16px; 
+  overflow: hidden; 
+  border: 1px solid #f0f0f0;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04); 
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.projectCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  border-color: #dfa135;
+}
+
+.imageBox { 
+  height: 220px; 
+  position: relative; 
+  overflow: hidden;
+}
+
+.imageBox img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  transition: transform 0.5s ease;
+}
+
+.projectCard:hover .imageBox img {
+  transform: scale(1.08);
+}
+
+.badge { 
+  position: absolute; 
+  top: 15px; 
+  right: 15px; 
+  background: rgba(255,255,255,0.95); 
+  color: #111;
+  padding: 6px 14px; 
+  font-size: 0.75rem; 
+  font-weight: 600; 
+  border-radius: 20px; 
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.cardContent { 
+  padding: 25px; 
+}
+
+.categoryTag {
+  color: #dfa135;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+  letter-spacing: 1px;
+}
+
+.title { 
+  font-size: 1.4rem; 
+  font-weight: 700; 
+  color: #111;
+  margin: 0 0 15px 0; 
+}
+
+.detailsRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 25px;
+}
+
+.spec { display: flex; align-items: center; gap: 5px; }
+.specDot { color: #ccc; }
+
+.inquiryBtn { 
+  width: 100%; 
+  padding: 14px; 
+  border: 1px solid #111; 
+  background: transparent; 
+  color: #111;
+  border-radius: 8px; 
+  font-weight: 600; 
+  font-size: 1rem;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 8px; 
+  cursor: pointer; 
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+}
+
+.inquiryBtn:hover { 
+  background: #111; 
+  color: white; 
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+.inquiryBtn:hover svg {
+  transform: translateX(4px);
+  transition: transform 0.3s ease;
+}
+
+
+/* 
+   SECTION 2: HISTORICAL ARCHIVES
+    */
+.archiveSection { 
+  padding: 100px 20px; 
+  background-color: #fbfbfb; 
+}
+
+.archiveHeader { 
+  text-align: center; 
+  margin-bottom: 50px; 
+}
+
+.archiveHeader h2 { 
+  font-size: 2.8rem; 
+  font-weight: 700;
+  color: #111; 
+  margin: 0 0 15px 0; 
+  letter-spacing: -0.5px;
+}
+
+.archiveHeader p {
+  font-size: 1.15rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.rowItem { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 35px 40px; 
+  background-color: #ffffff; 
+  border: 1px solid #eaeaea; 
+  border-radius: 16px; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.rowItem:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08); 
+  border-color: #dfa135; 
+}
+
+.projectInfo { 
+  flex: 1; 
+  padding-right: 50px; 
+}
+
+.projectTitle { 
+  font-size: 1.5rem; 
+  font-weight: 700;
+  color: #111; 
+  margin: 0 0 12px 0; 
+}
+
+.projectDesc {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.projectMeta { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 15px; 
+  min-width: 250px; 
+  border-left: 2px solid #f0f0f0; 
+  padding-left: 35px;
+}
+
+.metaItem { 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  color: #444; 
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.icon { color: #dfa135; }
+
+
+/* 
+   SECTION 3: WHATSAPP CTA 
+    */
+.ctaSection { 
+  padding: 80px 20px; 
+  background-color: #f9f9f9; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.ctaCard { 
+  background: #111; 
+  color: white; 
+  padding: 60px 40px; 
+  border-radius: 20px; 
+  text-align: center; 
+  max-width: 800px; 
+  width: 100%; 
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1); 
+}
+
+.ctaCard h2 { font-size: 2.5rem; margin: 0 0 15px 0; }
+.ctaCard p { font-size: 1.1rem; color: #ccc; margin: 0 auto 35px auto; max-width: 600px; }
+
+.whatsappBtn { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 10px; 
+  background: #25D366; 
+  color: white; 
+  text-decoration: none; 
+  padding: 15px 35px; 
+  border-radius: 50px; 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.whatsappBtn:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
+}
+
+
+/* 
+   CONSOLIDATED MOBILE RESPONSIVE FIXES
+    */
+@media (max-width: 768px) {
+  /* Section 1 Mobile */
+  .header h2 { font-size: 2.2rem; }
+  .filterGroup { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .filterDeck { padding: 20px; }
+  .projectsGrid { grid-template-columns: 1fr; }
+
+  /* Section 2 Mobile */
+  .archiveHeader h2 { font-size: 2.2rem; }
+  .rowItem { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 25px 20px; 
+    gap: 20px;
+  }
+  .projectInfo { padding-right: 0; }
+  .projectMeta { 
+    border-left: none; 
+    border-top: 1px solid #eaeaea; 
+    padding-left: 0; 
+    padding-top: 20px; 
+    width: 100%; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 15px;
+  }
+  .metaItem { flex: 1 1 calc(50% - 15px); }
+
+  /* Section 3 Mobile */
+  .ctaCard h2 { font-size: 2rem; }
+  .ctaCard { padding: 40px 20px; }
+}
+
+@media (max-width: 480px) {
+  .metaItem { flex: 1 1 100%; }
+}

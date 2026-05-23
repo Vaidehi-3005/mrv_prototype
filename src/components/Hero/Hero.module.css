@@ -1,0 +1,99 @@
+.heroContainer {
+  height: 86vh;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Zoom hote waqt image ko screen se bahar stretch hone se rokega */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- HOVER / AUTOPLAY SLOW ZOOM IMAGE (KEN BURNS EFFECT) --- */
+.heroImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Image ko full screen screen par perfect fit rakhega */
+  z-index: 0;
+  
+  /* Infinite keyframe animation jo loop par dheere-dheere chalegi */
+  animation: slowZoomEffect 12s ease-in-out infinite alternate;
+}
+
+/* Perfect Architectural Smooth Zoom Physics */
+@keyframes slowZoomEffect {
+  0% {
+    transform: scale(1); /* Starting point normal image */
+  }
+  100% {
+    transform: scale(1.12); /* Dheere-dheere 12% zoom-in hokar building ke paas jayega */
+  }
+}
+
+/* Dark aur Grayscale Overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); 
+  backdrop-filter: grayscale(50%); 
+  -webkit-backdrop-filter: grayscale(50%);
+  z-index: 1;
+}
+
+/* Content Styling */
+.content {
+  position: relative;
+  z-index: 2; 
+  text-align: center;
+  color: #ffffff;
+  padding: 0 30px;
+}
+
+.title {
+  font-family: 'Georgia', serif;
+  font-size: 4.5rem; 
+  margin-bottom: 1.2rem;
+  font-weight: normal;
+}
+
+.subtitle {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  letter-spacing: 1.8px;
+  opacity: 0.95;
+}
+
+.ctaButton {
+  padding: 18px 45px;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.ctaButton:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.8rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+}

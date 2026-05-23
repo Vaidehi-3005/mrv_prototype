@@ -1,0 +1,166 @@
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Crisp white background for a clean builder look */
+  padding: 6rem 2rem;
+  box-sizing: border-box;
+  
+  /* Modern Sans-Serif font system used by top real estate firms */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sectionWrapper {
+  max-width: 1440px;
+  width: 100%;
+}
+
+/* 2-Column Dashboard/Grid split */
+.gridWrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal 50/50 split for heavy structural presence */
+  gap: 5rem;
+  align-items: center;
+}
+
+/* Left Side Content layout */
+.textColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.taglineBlock {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.accentLine {
+  width: 30px;
+  height: 2px;
+  background-color: #000000; /* Dark premium structural accent line */
+}
+
+.sectionTagline {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: #64748b;
+}
+
+.sectionHeading {
+  font-size: 3.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 2.5rem 0;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.bodyText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.bodyText p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #475569;
+  text-align: left; /* Switched from justify to left-align for tech/corporate feel */
+}
+
+/* Bold introduction line instead of a book drop-cap */
+.highlightText {
+  font-size: 1.2rem !important;
+  color: #0f172a !important;
+  font-weight: 500;
+  line-height: 1.6 !important;
+}
+
+/* Builder specifications grid block */
+.specsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.specItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.specNumber {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.specLabel {
+  font-size: 0.85rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Right Side Image Box */
+.imageColumn {
+  width: 100%;
+}
+
+.imageContainer {
+  width: 100%;
+  aspect-ratio: 16 / 13; /* Structured, confident landscape ratio */
+  overflow: hidden;
+  background-color: #f1f5f9;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); /* Clean modern soft shadow */
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Subtle corporate interactive lift on layout hover */
+/* .imageContainer:hover .mainImage {
+  transform: scale(1.03);
+} */
+
+/* Fluid responsive breakdown for tablets and mobile devices */
+@media (max-width: 1024px) {
+  .gridWrapper {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  
+  .container {
+    padding: 4rem 1.5rem;
+  }
+  
+  .sectionHeading {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .imageContainer {
+    aspect-ratio: 16 / 10;
+  }
+  
+  .specsGrid {
+    margin-top: 2rem;
+  }
+}

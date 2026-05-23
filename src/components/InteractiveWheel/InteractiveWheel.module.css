@@ -1,0 +1,227 @@
+/* 1. GLOBAL & WHEEL CONTAINER */
+.wheelContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fafafa;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 40px 15px;
+}
+
+.mainHeading {
+  font-size: 48px;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 50px;
+  letter-spacing: 0.5px;
+  /* text-transform: uppercase; */
+  text-align: center;
+}
+
+   /* 2. INTERACTIVE WHEEL SECTION */
+.wheelCard {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  border-radius: 40px;
+  padding: 60px;
+  width: 100%;
+  max-width: 1100px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.04);
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+.wheelWrapper {
+  position: relative;
+  width: 440px;
+  height: 440px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.outerCircle {
+  position: relative;
+  width: 410px;
+  height: 410px;
+  border-radius: 50%;
+  border: 1px solid #f0f0f0;
+  transition: transform 1.5s cubic-bezier(0.25, 1, 0.22, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircleImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 275px;
+  height: 275px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: 6px solid #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: background-image 0.4s ease, transform 1.5s cubic-bezier(0.25, 1, 0.22, 1);  
+  z-index: 1;
+}
+
+.svgLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.circleTrackArc {
+  cursor: pointer;
+  pointer-events: auto;
+  transform-origin: center;
+  transform: rotate(-90deg); 
+  transition: stroke-width 0.4s cubic-bezier(0.25, 1, 0.22, 1);
+}
+
+.svgText {
+  font-size: 13.5px; 
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+.activeSvgText {
+  font-weight: 800 !important;
+  font-size: 14.5px;
+}
+
+.contentWrapper { flex: 1; margin-top: -30px; }
+
+.contentTitle { font-size: 42px; margin-bottom: 20px; color: #111111; font-weight: 600; }
+
+.contentDescription { font-size: 18px; line-height: 1.8; color: #444444; max-width: 500px; }
+
+.arrowIndicator {
+  position: absolute;
+  width: 450px; height: 450px;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: rotateContinuous 25s linear infinite;
+  display: flex; justify-content: center; align-items: center;
+  z-index: 3;
+}
+
+.arrowTop, .arrowBottom { position: absolute; font-size: 18px; color: #333; font-weight: 800; }
+.arrowTop { top: -10px; transform: rotate(90deg); }
+.arrowBottom { bottom: -10px; transform: rotate(-90deg); }
+
+@keyframes rotateContinuous { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.wheelCard:hover .arrowIndicator { animation-play-state: paused; }
+
+   /* 3. CREDENTIALS SECTION */
+.credsContainer { width: 100%; max-width: 1200px; padding: 80px 20px; text-align: center; margin-top: 60px; }
+.credsTitle { font-size: 42px; font-weight: 700; margin-bottom: 60px; }
+.credsGrid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
+.credCard { width: 320px; display: flex; flex-direction: column; align-items: center; }
+.medalSvgWrapper { width: 220px; height: 220px; margin-bottom: 25px; }
+.medalSvg { width: 100%; height: 100%; filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)); }
+
+    
+/* 4. TESTIMONIALS SECTION */
+    
+.testimonialsContainer { width: 100%; max-width: 1200px; padding: 80px 20px; background-color: #f9f9f9; text-align: center; margin-top: 40px; border-radius: 40px; }
+.testimonialsTitle { font-size: 42px; margin-bottom: 50px; }
+.sliderWrapper { max-width: 100%; overflow: hidden; }
+.sliderTrack { display: flex; gap: 30px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.testimonialCard { flex: 0 0 350px; scroll-snap-align: center; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
+.quoteIcon { font-size: 70px; color: #b89243; margin-bottom: 20px; }
+
+
+
+   /* 5. FINAL CTA BANNER (PASTEL PREMIUM LOOK) */
+.ctaContainer { 
+  width: 100%; 
+  max-width: 1100px; 
+  padding: 60px 20px; 
+  display: flex; 
+  justify-content: center; 
+}
+
+.ctaBanner { 
+  width: 100%; 
+
+  background: linear-gradient(135deg, #f5f0e6 0%, #e8e0d5 100%); 
+  border-radius: 30px; 
+  padding: 50px 60px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  border: 1px solid rgba(255, 255, 255, 0.5); 
+  box-shadow: 0 20px 40px rgba(210, 180, 140, 0.15);
+}
+
+.ctaTitle { 
+  color: #2d241e; 
+  font-size: 32px; 
+  font-weight: 700;
+  margin-bottom: 10px; 
+  letter-spacing: -0.5px;
+}
+
+.ctaText { 
+  color: #7a6e66; 
+  font-size: 17px;
+  font-weight: 500;
+}
+
+/* Updated WhatsApp Button styling to match pastel theme */
+.whatsappButton { 
+  background-color: #5d8e75; 
+  color: #ffffff; 
+  padding: 18px 35px; 
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600; 
+  text-decoration: none; 
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  transition: all 0.3s ease;
+}
+
+.whatsappButton:hover {
+  background-color: #377b5a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(93, 142, 117, 0.2);
+}
+
+   /* 6. RESPONSIVE */
+  
+@media (max-width: 1024px) {
+  .wheelCard { flex-direction: column; padding: 50px; }
+  .credsGrid { gap: 40px; }
+}
+
+@media (max-width: 768px) {
+  .wheelWrapper { width: 330px; height: 330px; }
+  .outerCircle { width: 310px; height: 310px; }
+  .ctaBanner { flex-direction: column; text-align: center; gap: 30px; padding: 40px 20px; }
+  .whatsappButton { width: 100%; justify-content: center; }
+}

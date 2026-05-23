@@ -1,0 +1,271 @@
+/* Base Full View Glass Filter Backdrop Container Layer */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Base Wrapper setup to break close button out of standard element bounding cards */
+.modalWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 680px; /* Exact widescreen popup dimensional scale aspect ratio */
+}
+
+/* Distinctive Outer Flat Panel White Card Border */
+.modalCardExterior {
+  background-color: #ffffff;
+  border-radius: 8px; /* Square chassis layout profile with slight micro curve edges */
+  padding: 30px;
+  box-sizing: border-box;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* High-fidelity internal floating thin accent line frame border */
+.modalCardInteriorBorder {
+  border: 2px solid #29881a; /* Elite deep royal violet palette tint code matching upload */
+  border-radius: 6px;
+  padding: 40px 50px;
+  box-sizing: border-box;
+}
+
+/* Floating circle button anchor profile precisely layout aligned over right quadrant */
+.closeCircleBtn {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 34px;
+  height: 34px;
+  background-color: #167748;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-weight: 400;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+}
+
+/* Title Configurations */
+.formHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.formHeader h2 {
+  font-family: 'Cinzel', 'Times New Roman', serif; /* Upscale editorial header style */
+  font-size: 2.15rem;
+  font-weight: 400;
+  color: #22ae71;
+  letter-spacing: 1.5px;
+  margin: 0 0 10px 0;
+  text-align: center;
+}
+
+.titleUnderline {
+  width: 50px;
+  height: 1.5px;
+  background-color: #1a8832;
+}
+
+/* Form Matrix Flow Blocks */
+.screenshotForm {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Spacious gaps between input groups */
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+/* Pure Bottom-border field customization styling rules logic override */
+.inputGroup input,
+.inputGroupFull input {
+  width: 100%;
+  height: 40px;
+  border: none !important;
+  border-bottom: 1.5px solid #1a8823 !important; /* Underline input style matching image */
+  background: transparent !important;
+  font-family: inherit;
+  font-size: 1.05rem;
+  color: #1a881f;
+  padding: 4px 2px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.inputGroup input::placeholder,
+.inputGroupFull input::placeholder {
+  color: #1a881c;
+  opacity: 0.85;
+}
+
+/* Custom layout mapping for international phone input to mimic the flat screenshot style */
+.phoneFieldCombo {
+  width: 100%;
+}
+
+.screenshotCountrySelector {
+  border: none !important;
+  border-bottom: 1.5px solid #1a883b !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  height: 40px !important;
+  padding-right: 10px !important;
+}
+
+.screenshotCountrySelector :global(.react-international-phone-country-selector-dropdown) {
+  color: #000000 !important;
+}
+
+.screenshotPhoneInput {
+  border: none !important;
+  border-bottom: 1.5px solid #1a883f !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  height: 40px !important;
+  width: 100% !important;
+  font-size: 1.05rem !important;
+  color: #1a8837 !important;
+}
+
+.screenshotPhoneInput::placeholder {
+  color: #1a883f !important;
+  opacity: 0.85;
+}
+
+/* Agreement Terms Layout Blocks */
+.disclaimerCheckboxRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.disclaimerCheckboxRow input[type="checkbox"] {
+  margin-top: 4px;
+  cursor: pointer;
+  accent-color: #1a8834;
+}
+
+.disclaimerCheckboxRow label {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #000000;
+  font-weight: 700; /* Matching heavy bold font text structure weights from screenshot */
+  user-select: none;
+}
+
+.disclaimerCheckboxRow label span {
+  color: #1a8835;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Large Hollow Capsule Submit Control Profile Button */
+.capsuleSubmitBtn {
+  width: 100%;
+  height: 52px;
+  background: transparent;
+  color: #1a8823;
+  border: 1.5px solid #1a8821;
+  border-radius: 30px; /* Perfect oval outline track chassis styling design rules */
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.capsuleSubmitBtn:hover {
+  background-color: #1a8835;
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Responsive Adaptations for Handheld/Mobile Formats 
+   ========================================================================== */
+@media (max-width: 640px) {
+  .modalCardInteriorBorder {
+    padding: 30px 20px;
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr; /* Drop input row split layout down into single vertical line stack lines */
+    gap: 30px;
+  }
+  
+  .formHeader h2 {
+    font-size: 1.75rem;
+  }
+}
+
+
+
+/* 1. Tablet and Small Desktop Adjustments */
+@media (max-width: 992px) {
+  .modalWrapper {
+    max-width: 90%; /* Allows a bit more breathing room on tablets */
+  }
+}
+
+/* 2. Mobile/Handheld Formats */
+@media (max-width: 640px) {
+  .modalOverlay {
+    padding: 15px; /* Less padding on small screens to give the form more space */
+  }
+
+  .modalCardInteriorBorder {
+    padding: 25px 15px; /* Tighter padding for mobile screens */
+  }
+  
+  .formRow {
+    grid-template-columns: 1fr; /* Stack inputs vertically */
+    gap: 20px; /* Slightly tighter gap on mobile */
+  }
+  
+  .formHeader h2 {
+    font-size: 1.5rem; /* Smaller title to prevent wrapping issues */
+  }
+
+  /* Adjust Close button position for mobile so it doesn't get cut off */
+  .closeCircleBtn {
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+}
+
+/* 3. Extra Small Devices (Small Phones) */
+@media (max-width: 400px) {
+  .formHeader h2 {
+    font-size: 1.3rem;
+  }
+  
+  .modalCardInteriorBorder {
+    padding: 20px 10px;
+  }
+}

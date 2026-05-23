@@ -1,0 +1,78 @@
+.pageContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f9f9f9;
+  padding: 100px 20px 20px 20px; /* Upar Navbar ke liye jagah chodi hai */
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid #eaeaea;
+}
+
+.icon {
+  color: #dfa135; /* Premium Gold color */
+  margin-bottom: 20px;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: #111;
+  margin: 0 0 5px 0;
+  font-family: 'Georgia', serif;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #dfa135;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0 0 20px 0;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 35px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background: #dfa135;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(223, 161, 53, 0.2);
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2rem; }
+  .card { padding: 40px 20px; }
+}
