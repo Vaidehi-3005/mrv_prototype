@@ -1,0 +1,59 @@
+.ctaSection { 
+  padding: 80px 20px; 
+  background-color: #f9f9f9; 
+  display: flex; 
+  justify-content: center; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.ctaCard { 
+  /* NAYA: Premium Midnight Blue Gradient */
+  background: linear-gradient(135deg, #29364b 0%, #3d64b9 100%); 
+  color: white; 
+  padding: 60px 40px; 
+  border-radius: 20px; 
+  text-align: center; 
+  max-width: 800px; 
+  width: 100%; 
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.25); 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ctaCard h2 { 
+  font-size: 2.5rem; 
+  margin: 0 0 15px 0; 
+  letter-spacing: -0.5px;
+}
+
+.ctaCard p { 
+  font-size: 1.1rem; 
+  /* NAYA: Paragraph ka color #ccc se thoda soft grey-blue kiya hai */
+  color: #94a3b8; 
+  margin: 0 auto 35px auto; 
+  max-width: 600px; 
+  line-height: 1.6;
+}
+
+.whatsappBtn { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 10px; 
+  background: #25D366; /* Official WhatsApp Green */
+  color: white; 
+  text-decoration: none; 
+  padding: 15px 35px; 
+  border-radius: 50px; 
+  font-size: 1.1rem; 
+  font-weight: 600; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.whatsappBtn:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
+}
+
+@media (max-width: 768px) {
+  .ctaCard h2 { font-size: 2rem; }
+  .ctaCard { padding: 40px 20px; }
+}

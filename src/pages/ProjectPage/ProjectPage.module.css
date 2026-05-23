@@ -1,0 +1,29 @@
+.hero {
+  height: 86vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+}
+
+.heroText {
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #111;
+  color: white;
+}

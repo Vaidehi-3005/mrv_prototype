@@ -1,0 +1,129 @@
+.whoWeAreSection {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  max-width: 900px; /* Text line length limit for better reading */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* --- Top Tags (X Y Z) --- */
+.tagsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tag {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #dfa135; /* Premium Gold Accent */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.dot {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+/* --- Main Heading & Text --- */
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #111111; /* Deep dark gray instead of pure black */
+  margin: 0;
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+}
+
+.description {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #555555; /* Soft gray for easy reading */
+  margin: 0;
+  margin-bottom: 40px;
+  max-width: 800px;
+}
+
+/* --- Know More Link with Arrow Animation --- */
+.knowMoreLink {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #111111;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+}
+
+.arrowIcon {
+  transition: transform 0.3s ease;
+}
+
+/* Hover Effect */
+.knowMoreLink:hover {
+  color: #dfa135;
+  border-bottom: 2px solid #dfa135;
+}
+
+.knowMoreLink:hover .arrowIcon {
+  transform: translateX(6px); /* Arrow moves to the right on hover */
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .whoWeAreSection {
+    padding: 70px 20px;
+  }
+
+  .tagsContainer {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .tag {
+    font-size: 0.8rem;
+    letter-spacing: 1.5px;
+  }
+
+  .heading {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.2rem;
+  }
+  
+  .tag {
+    font-size: 0.75rem;
+  }
+}

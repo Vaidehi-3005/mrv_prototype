@@ -1,0 +1,249 @@
+
+.gallerySection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.showcaseBox {
+  width: 100%;
+  max-width: 1100px;
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr; /* 40/60 horizontal split */
+  background-color: #f0f0f2;
+  border: 1px solid #e0e0e4;
+  border-radius: 40px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.leftShowcase {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  background-color: #111;
+  overflow: hidden;
+}
+
+.sliderTrack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.slideItem {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.mainHeroImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.captionOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 40%, transparent);
+  padding: 2rem 1.25rem 1.25rem 1.25rem;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.imageCaption {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.rightControls {
+  width: 100%;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+  box-sizing: border-box;
+}
+
+.arrowButton {
+  background: none;
+  border: none;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.2s ease;
+}
+
+.arrowButton:hover {
+  transform: scale(1.1);
+}
+
+.arrowIcon {
+  width: 32px;
+  height: 32px;
+  fill: none;
+  stroke: #aaaaaa;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: stroke 0.2s ease;
+}
+
+.arrowButton:hover .arrowIcon {
+  stroke: #555555;
+}
+
+.thumbnailsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  flex: 1;
+  padding: 0 1rem;
+}
+
+.thumbWrapper {
+  background: none;
+  border: 3px solid transparent;
+  padding: 0;
+  width: 125px;
+  height: 125px;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.thumbImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.activeThumb {
+  border-color: #ffffff;
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+/* MOBILE VIEW ONLY  */
+@media (max-width: 768px) {
+  .gallerySection {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+  }
+
+  /* Morphing the layout grid into the single card container */
+  .showcaseBox {
+    grid-template-columns: 1fr; /* Stack vertically */
+    background-color: #ffffff;  /* Outer content base goes white */
+    border: 1px solid #e5e5e9;
+    border-radius: 28px;
+    padding: 12px;             /* Creates the outer frame lip around the layout */
+    gap: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  }
+
+  /* Top Viewport Configuration */
+  .leftShowcase {
+    height: auto;
+    aspect-ratio: 1 / 1;       /* Keeps main image square like the image */
+    border-radius: 20px;       /* Inner image curves */
+  }
+
+  /* Hide description text on mobile view layout to follow mockup blueprint */
+  .captionOverlay {
+    display: none;
+  }
+
+  /* Bottom Ribbon Navigation Control Box */
+  .rightControls {
+    height: auto;
+    padding: 8px 4px;
+    flex-direction: row;       /* Keeps arrows and thumbs on one horizontal row */
+    background: transparent;
+  }
+
+  .arrowButton {
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrowIcon {
+    width: 24px;
+    height: 24px;
+    stroke: #b5b5ba;
+    stroke-width: 3;
+  }
+
+  .thumbnailsContainer {
+    gap: 8px;
+    padding: 0 4px;
+  }
+
+  /* Resizing the thumbnails to sit seamlessly inside the container layout */
+  .thumbWrapper {
+    width: 72px;
+    height: 72px;
+    border-radius: 14px;
+    border-width: 2px;
+    box-shadow: none;
+  }
+
+  /* Active border indicator visibility changes */
+  .activeThumb {
+    border-color: #3182ce;    /* Soft blue border highlight, or use dark/light if preferred */
+    transform: none;
+  }
+}
+
+/* Micro adjustments for extra small screen widths */
+@media (max-width: 360px) {
+  .thumbWrapper {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+  }
+}

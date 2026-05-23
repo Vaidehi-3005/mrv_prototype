@@ -1,0 +1,112 @@
+.footerWrapper {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footerbody {
+  background-color:#0c223f; 
+  padding: 60px 0 20px;
+  color: #e2e8f0; 
+}
+
+.footercontainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+
+.footerlogo h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #ffffff; 
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.footercol_p { 
+  font-size: 15px; 
+  color: #cbd5e1; 
+  line-height: 1.6; 
+}
+
+.footercol_h3 {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+
+.footercol_ul_li {
+  list-style: none;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #f8fafc;
+  cursor: pointer;
+}
+
+.footercol_ul_li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footercol_ul_li a:hover {
+  text-decoration: underline; 
+}
+
+  
+.socials { 
+  display: flex; 
+  gap: 20px; 
+  margin-top: 15px; 
+}
+
+.socials span a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.socials span a:hover {
+  transform: scale(1.15); 
+}
+
+.facebook { color: #1877F2; font-size: 24px; }
+.instagram { color: #E1306C; font-size: 24px; }
+.linkedin { color: #0077b5; font-size: 24px; }
+.twitter { color: #ffffff; font-size: 24px; } 
+.mapIcon { color: #e54135; font-size: 24px; }
+
+.footerbottom {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  border-top: 1px solid #1e293b; 
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Animations */
+.fadeup { opacity: 0; transform: translateY(20px); animation: fadeUp 0.8s ease forwards; }
+.delay1 { animation-delay: 0.1s; }
+.delay2 { animation-delay: 0.2s; }
+.delay3 { animation-delay: 0.3s; }
+
+@keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) { 
+  .footercontainer { grid-template-columns: 1fr 1fr; } 
+}
+
+@media (max-width: 600px) { 
+  .footercontainer { grid-template-columns: 1fr; text-align: center; } 
+  .socials { justify-content: center; }
+}

@@ -1,0 +1,181 @@
+.pageWrapper {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding-top: 90px; /* Prevents fixed navbar overlap */
+  box-sizing: border-box;
+}
+
+.pageContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px 20px;
+}
+
+/* Page Header Elements */
+.pageHeader {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pageHeader h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 12px 0;
+  letter-spacing: -0.5px;
+}
+
+.pageHeader p {
+  font-size: 1.1rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Grid Layout */
+.splitGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Split perfectly down the center */
+  gap: 50px;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e2e8f0;
+}
+
+/* Left Map Frame */
+.mapContainer {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Forces the container to stay square */
+  overflow: hidden;
+  border-radius: 16px;
+  border: 1px solid #cbd5e1;
+}
+
+.mapIframe {
+  border: 0;
+  display: block;
+}
+
+/* Right Content Area */
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.accentLabel {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #b58a3a;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.projectTitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+  line-height: 1.15;
+}
+
+.addressBlock {
+  margin-bottom: 36px;
+}
+
+.primaryAddress {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #334155;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.secondaryAddress {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Enquiry CTA Button */
+.enquireButton {
+  width: fit-content;
+  background-color: #0f172a;
+  color: #ffffff;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.enquireButton:hover {
+  background-color: #1e293b;
+  transform: translateY(-2px);
+}
+
+.enquireButton:active {
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Responsive Tablet & Mobile Adjustments)
+   ========================================================================== */
+
+@media (max-width: 968px) {
+  .splitGrid {
+    grid-template-columns: 1fr; /* Switch from 2-column layout to 1 stacked column */
+    gap: 32px;
+    padding: 24px;
+  }
+
+  .pageHeader h1 {
+    font-size: 2.25rem;
+  }
+
+  .projectTitle {
+    font-size: 2rem;
+  }
+
+  .contentContainer {
+    align-items: center;
+    text-align: center;
+  }
+
+  .enquireButton {
+    width: 100%; /* Spans full button width across tiny screen devices for thumb optimization */
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageContainer {
+    padding: 20px 12px 60px 12px;
+  }
+
+  .pageHeader {
+    margin-bottom: 30px;
+  }
+
+  .pageHeader h1 {
+    font-size: 2rem;
+  }
+
+  .primaryAddress, 
+  .secondaryAddress {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,164 @@
+.sliderContainer {
+  width: 100%;
+  padding: 60px 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  overflow: hidden; /* Prevent global page scrollbars */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+  padding: 0 20px;
+}
+
+.header h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 10px;
+  letter-spacing: -0.02em;
+}
+
+.header p {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+/* The masking window container with gradient fades on edges for a luxury look */
+.sliderWindow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  
+  /* Left and Right blur-fade masking overlays */
+  mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 10%, #000 90%, transparent);
+}
+
+/* The infinite moving track line */
+.sliderTrack {
+  display: flex;
+  width: max-content; /* Dynamically adjusts width to hold all inline cards */
+  gap: 24px;
+  animation: slideRightToLeft 40s linear infinite;
+}
+
+/* Pause the scrolling animation when a potential buyer hovers over an amenity */
+.sliderTrack:hover {
+  animation-play-state: paused;
+}
+
+/* Fixed size perfect square block architecture */
+.squareCard {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  width: 260px;
+  height: 260px;
+  flex-shrink: 0; /* Prevents flexbox from flattening cards */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.01);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.squareCard:hover {
+  transform: translateY(-5px);
+  border-color: #cbd5e1;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.06);
+}
+
+.iconContainer {
+  width: 52px;
+  height: 52px;
+  margin-bottom: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e293b;
+}
+
+.iconContainer svg {
+  width: 100%;
+  height: 100%;
+}
+
+.cardContent h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0 0 8px 0;
+}
+
+.cardContent p {
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: #64748b;
+  margin: 0;
+}
+
+/* CSS Keyframes for a seamless left-to-right visual loop */
+@keyframes slideRightToLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves back exactly half of the track's full duplicate length */
+    transform: translateX(-50%);
+  }
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (Mobile Responsive Viewport Scales)
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  .sliderContainer {
+    padding: 40px 0; /* Slightly reduces spacing over & below the container */
+  }
+
+  .header {
+    margin-bottom: 24px; /* Decreased gap before the cards begin */
+  }
+
+  .header h2 {
+    font-size: 1.65rem; /* Cleaner, readable title size for smaller device headers */
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .sliderTrack {
+    gap: 16px; /* Tightens space between sliding elements */
+  }
+
+  /* Compact responsive card dimensions optimized for handheld viewports */
+  .squareCard {
+    width: 180px;
+    height: 180px;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .iconContainer {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 10px;
+  }
+
+  .cardContent h3 {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+  }
+
+  .cardContent p {
+    font-size: 0.75rem;
+    line-height: 1.35;
+  }
+}

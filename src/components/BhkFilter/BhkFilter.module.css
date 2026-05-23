@@ -1,0 +1,201 @@
+.filterSection {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 4rem 0 0 0; /* Left and right padding stripped to stretch container edge-to-edge */
+  box-sizing: border-box;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+}
+
+.fullWidthWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionHeading {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 1.5rem 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+/* Tab Switch Filter Group */
+.tabButtonGroup {
+  display: flex;
+  background-color: #f1f5f9;
+  padding: 0.35rem;
+  border-radius: 8px;
+  gap: 0.25rem;
+  margin-bottom: 3rem;
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  padding: 0.6rem 2rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.activeTab {
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Edge-To-Edge horizontal panel split row */
+.showcaseBox {
+  width: 100vw; /* Spans the absolute full width of the screen */
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* Clean asymmetric architectural balance */
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+/* LEFT PANEL ZONE: Solid crisp white background to feature the layout blueprint graphic */
+.mapViewport {
+  width: 100%;
+  height: 380px; /* Low profile sleek horizontal block height */
+  background-color: #ffffff; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.mapImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  animation: slideInLeft 0.45s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+/* RIGHT PANEL ZONE: Distinct light-gray background to separate and elevate text content */
+.detailsColumn {
+  width: 100%;
+  height: 380px; /* Synchronized tracking height with image side */
+  background-color: #f5f5f7; /* High-contrast clean panel look */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5rem;
+  box-sizing: border-box;
+  border-left: 1px solid #e2e8f0;
+}
+
+/* Container to handle textual sliding on switch */
+.animatedTextGroup {
+  animation: slideInRight 0.45s cubic-bezier(0.25, 1, 0.5, 1) both;
+}
+
+.unitTitle {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.01em;
+}
+
+.unitDescription {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #444446;
+  line-height: 1.6;
+  max-width: 550px;
+}
+.viewDetailsButton {
+  margin-top: 2rem;
+  padding: 0.85rem 2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #000000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.viewDetailsButton:hover {
+  background-color: #222222;
+}
+
+.btnArrow {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.2s ease;
+}
+
+.viewDetailsButton:hover .btnArrow {
+  transform: translateX(4px); /* Minor push forward on hover */
+}
+
+/* 🎬 Cinematic Slide-In Animation Mappings */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px); /* Smooth slide inward from the left screen boundary */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px); /* Smooth slide inward from the right screen boundary */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive collapse rule layout for mobile phones */
+@media (max-width: 768px) {
+  .showcaseBox {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  
+  .mapViewport,
+  .detailsColumn {
+    height: auto;
+  }
+  
+  .detailsColumn {
+    padding: 3rem 2rem;
+    border-left: none;
+    border-top: 1px solid #e2e8f0;
+  }
+  
+  .mapImage {
+    padding: 1.5rem;
+    height: 300px;
+  }
+}

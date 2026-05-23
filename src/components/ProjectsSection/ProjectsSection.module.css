@@ -1,0 +1,159 @@
+.projectsSection { padding: 80px 0; background: #fff; font-family: 'Poppins', sans-serif;}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/*  HEADER  */
+.sectionHeader { margin-bottom: 40px; }
+.overheadTag { color: #b89243; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; font-weight: 600; }
+.sectionHeader h2 { font-size: 2.8rem; color: #111; margin: 10px 0; font-family: 'Georgia', serif;}
+
+/*  SLIDER WRAPPER & ARROWS  */
+.sliderWrapper { position: relative; width: 100%; display: flex; align-items: center; }
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 1px solid #eaeaea;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 20; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+.leftBtn { left: -70px; } 
+.rightBtn { right: -70px; }
+.navBtn:hover { background: #111; color: #fff; border-color: #111; }
+
+/*  SLIDER TRACK  */
+.sliderContainer {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  width: 100%;
+  padding: 20px 0; 
+}
+.sliderContainer::-webkit-scrollbar { display: none; }
+
+/*  CARDS (PREMIUM LOOK)  */
+.card { 
+  flex: 0 0 350px; 
+  height: 480px; 
+  position: relative; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  cursor: pointer; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.imageWrapper { width: 100%; height: 100%; position: absolute; top: 0; left: 0; z-index: 1; }
+.imageWrapper img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease; }
+.card:hover .imageWrapper img { transform: scale(1.08); }
+
+/*  BADGE  */
+.statusBadge { 
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  background: rgba(255,255,255,0.95); 
+  color: #111;
+  padding: 6px 16px; 
+  border-radius: 30px; 
+  font-size: 0.8rem; 
+  font-weight: 600; 
+  z-index: 10; 
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/*  OVERLAY TEXT & GRADIENT  */
+.floatingMetadata { 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  padding: 40px 25px 25px 25px; 
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%); 
+  color: #fff; 
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title { font-size: 1.6rem; margin: 0; font-weight: 600; font-family: 'Georgia', serif;}
+.location { font-size: 0.85rem; opacity: 0.9; display: flex; align-items: center; gap: 5px; margin-bottom: 5px; letter-spacing: 1px;}
+
+/*  HOVER HIDDEN DETAILS  */
+.metaHidden { 
+  max-height: 0; 
+  overflow: hidden; 
+  transition: max-height 0.5s ease, opacity 0.5s ease, margin-top 0.5s ease; 
+  opacity: 0; 
+}
+.card:hover .metaHidden { 
+  max-height: 150px; 
+  opacity: 1; 
+  margin-top: 15px; 
+}
+
+.desc { font-size: 0.95rem; line-height: 1.5; color: #e0e0e0; margin-bottom: 10px; }
+.viewLink { color: #dfa135; display: flex; align-items: center; gap: 5px; font-weight: 500; text-decoration: none; transition: gap 0.3s; }
+.viewLink:hover { gap: 10px; color: #f2ba54; }
+
+/*  EXPLORE BUTTON  */
+.exploreBtnContainer { display: flex; justify-content: center; margin-top: 50px; }
+.actionBtn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 15px 35px; background: #111; color: #fff;
+  border: none; border-radius: 50px;
+  font-size: 1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease;
+}
+.actionBtn:hover {
+  background: #dfa135; transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(223, 161, 53, 0.3);
+}
+
+/* 
+   ALL-DEVICE RESPONSIVE MEDIA QUERIES (NEW FIXES)
+    */
+
+@media (max-width: 1350px) {
+  .leftBtn { left: 10px; }
+  .rightBtn { right: 10px; }
+}
+
+@media (max-width: 768px) {
+  .projectsSection { padding: 60px 0; }
+  .sectionHeader h2 { font-size: 2.2rem; }
+  
+  .card { 
+    flex: 0 0 85%; 
+    height: 420px; 
+  }
+  
+  .navBtn { padding: 8px; }
+  .leftBtn { left: 5px; }
+  .rightBtn { right: 5px; }
+  
+  .title { font-size: 1.4rem; }
+  .floatingMetadata { padding: 30px 20px 20px 20px; }
+}
+
+@media (max-width: 480px) {
+  .sectionHeader h2 { font-size: 1.8rem; }
+  .card { 
+    flex: 0 0 90%; 
+    height: 400px; 
+  }
+}
