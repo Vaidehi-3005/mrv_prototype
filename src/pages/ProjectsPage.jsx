@@ -10,14 +10,14 @@ import img3 from '../assets/img3.jpg';
 
 // DATA
 const allProjects = [
-  { id: 1, title: 'Kalpataru One Worli', location: 'Worli, Mumbai', specs: '4 & 5 BHK Sky Villas', image: img1, status: 'Ongoing', category: 'Residential' },
-  { id: 2, title: 'Mayo Girls Hostel', location: 'Nagpur, MH', specs: '500-Bed Institutional Block', image: img2, status: 'Completed', category: 'Government Assets' },
-  { id: 3, title: 'Kalpataru Parkcity', location: 'Thane West', specs: 'Premium 2 & 3 BHK', image: img3, status: 'Ongoing', category: 'Residential' },
+  { id: 1, title: 'Rival One Worli', location: 'Worli, Mumbai', specs: '4 & 5 BHK Sky Villas', image: img1, status: 'Ongoing', category: 'Residential' },
+  { id: 2, title: 'Rival Mayo Girls Hostel', location: 'Nagpur, MH', specs: '500-Bed Institutional Block', image: img2, status: 'Completed', category: 'Government Assets' },
+  { id: 3, title: 'Rival Parkcity', location: 'Thane West', specs: 'Premium 2 & 3 BHK', image: img3, status: 'Ongoing', category: 'Residential' },
 ];
 
 const historicalProjects = [
-  { id: 1, title: "Girls Hostel Mayo", type: "Institutional", location: "Nagpur, MH", year: "2018", description: "A 500-bed modern hostel facility equipped with solar water heating." },
-  { id: 2, title: "State Transport Hub", type: "Government Asset", location: "Pune, MH", year: "2019", description: "Centralized bus terminal with integrated commercial spaces." }
+  { id: 1, title: "Rival Mayo Girls Hostel", type: "Institutional", location: "Nagpur, MH", year: "2018", description: "A 500-bed modern hostel facility equipped with solar water heating." },
+  { id: 2, title: "Rival State Transport Hub", type: "Government Asset", location: "Pune, MH", year: "2019", description: "Centralized bus terminal with integrated commercial spaces." }
 ];
 
 const ProjectsPage = () => {
