@@ -12,7 +12,7 @@ import img4 from '../../assets/img7.jpg';
 const properties = [
   { 
     id: 1, 
-    title: 'KALPATARU ONE WORLI', 
+    title: 'RIVAL ONE WORLI', 
     image: img1,
     headline: "Elevate Your Lifestyle",
     highlight: "At One Worli",
@@ -20,7 +20,7 @@ const properties = [
   },
   { 
     id: 2, 
-    title: 'KALPATARU PARKCITY', 
+    title: 'RIVAL PARKCITY', 
     image: img2,
     headline: "Nature Meets Luxury",
     highlight: "In Parkcity",
@@ -28,7 +28,7 @@ const properties = [
   },
   { 
     id: 3, 
-    title: 'KALPATARU BLOSSOMS', 
+    title: 'RIVAL BLOSSOMS', 
     image: img3,
     headline: "A New Blooming Era",
     highlight: "Of Elegance",
@@ -36,7 +36,7 @@ const properties = [
   },
   { 
     id: 4, 
-    title: 'KALPATARU VERBINA', 
+    title: 'RIVAL VERBINA', 
     image: img4,
     headline: "Redefining Urban Living",
     highlight: "With Verbina",
