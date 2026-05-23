@@ -11,12 +11,12 @@ import img5 from '../../assets/ProjectImg/project5.jpg';
 import img6 from '../../assets/ProjectImg/project6.jpg';
 
 const projectsData = [
-  { id: 1, title: 'Kalpataru One Worli', location: 'Worli, Mumbai', desc: "Ultra-luxurious 4 & 5 BHK sky villas.", image: img1, status: "Ready to Move" },
-  { id: 2, title: 'Kalpataru Parkcity', location: 'Thane West', desc: "A sprawling township designed around parks.", image: img2, status: "New Launch" },
-  { id: 3, title: 'Kalpataru Blossoms', location: 'Pune, Maharashtra', desc: "Premium residences for modern families.", image: img3, status: "Under Construction" },
-  { id: 4, title: 'Kalpataru Verbina', location: 'Bandra, Mumbai', desc: "Signature architectural masterpieces.", image: img4, status: "Ready to Move" },
-  { id: 5, title: 'Kalpataru Elegance', location: 'Nagpur, Maharashtra', desc: "A boutique residential landmark.", image: img5, status: "New Launch" },
-  { id: 6, title: 'Kalpataru O2', location: 'Andheri East', desc: "Premium spaces engineered for business.", image: img6, status: "Under Construction" }
+  { id: 1, title: 'Rival  One Worli', location: 'Worli, Mumbai', desc: "Ultra-luxurious 4 & 5 BHK sky villas.", image: img1, status: "Ready to Move" },
+  { id: 2, title: 'Rival  Parkcity', location: 'Thane West', desc: "A sprawling township designed around parks.", image: img2, status: "New Launch" },
+  { id: 3, title: 'Rival  Blossoms', location: 'Pune, Maharashtra', desc: "Premium residences for modern families.", image: img3, status: "Under Construction" },
+  { id: 4, title: 'Rival  Verbina', location: 'Bandra, Mumbai', desc: "Signature architectural masterpieces.", image: img4, status: "Ready to Move" },
+  { id: 5, title: 'Rival  Elegance', location: 'Nagpur, Maharashtra', desc: "A boutique residential landmark.", image: img5, status: "New Launch" },
+  { id: 6, title: 'Rival  O2', location: 'Andheri East', desc: "Premium spaces engineered for business.", image: img6, status: "Under Construction" }
 ];
 
 const ProjectsSection = () => {
