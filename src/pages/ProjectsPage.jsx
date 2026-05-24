@@ -2,6 +2,7 @@ import  { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, ArrowRight, Building2, Calendar } from 'lucide-react'; 
 import styles from './ProjectsPage.module.css';
+import {useNavigate} from 'react-router-dom';
 
 
 import img1 from '../assets/img1.jpg';
@@ -23,7 +24,7 @@ const historicalProjects = [
 const ProjectsPage = () => {
   const [activeStatus, setActiveStatus] = useState('All');
   const [activeCategory, setActiveCategory] = useState('All');
-
+const navigate = useNavigate();
   const filteredProjects = allProjects.filter((project) => {
     return (activeStatus === 'All' || project.status === activeStatus) &&
            (activeCategory === 'All' || project.category === activeCategory);
@@ -81,7 +82,7 @@ const ProjectsPage = () => {
                       <span className={styles.specDot}>•</span>
                       <span className={styles.spec}>{project.specs}</span>
                     </div>
-                    <button className={styles.inquiryBtn}>VIEW DETAILS<ArrowRight size={16} /></button>
+                    <button className={styles.inquiryBtn} onClick={() => navigate('/Project-details')}>VIEW DETAILS<ArrowRight size={16} /></button>
                   </div>
                 </motion.div>
               ))}
