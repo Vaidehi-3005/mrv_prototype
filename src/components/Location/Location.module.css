@@ -2,7 +2,7 @@
   font-family: system-ui, -apple-system, sans-serif;
   background-color: #f8fafc;
   min-height: 100vh;
-  padding-top: 90px; /* Prevents fixed navbar overlap */
+  padding-top: 10px; /* Prevents fixed navbar overlap */
   box-sizing: border-box;
 }
 
@@ -139,7 +139,7 @@
   .splitGrid {
     grid-template-columns: 1fr; /* Switch from 2-column layout to 1 stacked column */
     gap: 32px;
-    padding: 24px;
+    padding: 15px;
   }
 
   .pageHeader h1 {
@@ -163,7 +163,7 @@
 
 @media (max-width: 480px) {
   .pageContainer {
-    padding: 20px 12px 60px 12px;
+    padding: 20px 12px 60px 10px;
   }
 
   .pageHeader {

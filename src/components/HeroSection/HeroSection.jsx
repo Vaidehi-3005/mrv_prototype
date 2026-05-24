@@ -12,7 +12,7 @@ import img4 from '../../assets/img7.jpg';
 const properties = [
   { 
     id: 1, 
-    title: 'RIVAL ONE WORLI', 
+    title: 'SKYLINE LIVING', 
     image: img1,
     headline: "Elevate Your Lifestyle",
     highlight: "At One Worli",
@@ -20,7 +20,7 @@ const properties = [
   },
   { 
     id: 2, 
-    title: 'RIVAL PARKCITY', 
+    title: 'SHREE VASTU HERIGHTS', 
     image: img2,
     headline: "Nature Meets Luxury",
     highlight: "In Parkcity",
@@ -28,7 +28,7 @@ const properties = [
   },
   { 
     id: 3, 
-    title: 'RIVAL BLOSSOMS', 
+    title: 'DIVYAM APARTMENTS', 
     image: img3,
     headline: "A New Blooming Era",
     highlight: "Of Elegance",
@@ -36,7 +36,7 @@ const properties = [
   },
   { 
     id: 4, 
-    title: 'RIVAL VERBINA', 
+    title: 'AARAV RESIDENCY', 
     image: img4,
     headline: "Redefining Urban Living",
     highlight: "With Verbina",
