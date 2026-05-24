@@ -1,5 +1,6 @@
 .whoWeAreSection {
-  padding: 100px 20px;
+  padding: 46px 10px;
+  margin-top: 0px;
   background-color: #ffffff;
   display: flex;
   justify-content: center;
@@ -94,7 +95,7 @@
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .whoWeAreSection {
-    padding: 70px 20px;
+    padding: 20px 10px;
   }
 
   .tagsContainer {

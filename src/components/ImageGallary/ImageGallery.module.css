@@ -2,7 +2,7 @@
 .gallerySection {
   width: 100%;
   background-color: #ffffff;
-  padding: 5rem 2rem;
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
@@ -167,7 +167,7 @@
 /* MOBILE VIEW ONLY  */
 @media (max-width: 768px) {
   .gallerySection {
-    padding: 2rem 1rem;
+    padding: 2rem 0.2rem;
   }
 
   .sectionTitle {
