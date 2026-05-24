@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import styles from "./InteractiveWheel.module.css"; 
 
 const itemsData = [
@@ -85,7 +85,7 @@ export default function InteractiveWheel() {
     
       <div className={styles.pageWrapper}>
     
-        <h1 className={styles.mainHeading}>MRV BenchMarks</h1>
+        <h1 className={styles.mainHeading}>MRV Bench Marks</h1>
 
         <div className={styles.wheelCard}>
           
@@ -237,31 +237,38 @@ export function CredentialsSection() {
     </div>
   );
 }
+
 // TESTIMONIALS SECTION
+
+
 const testimonialsData = [
   {
     id: 1,
     name: "Rajiv Singhal",
     role: "CEO, TechNova Solutions",
-    review: "MRV Bench Marks delivered our corporate office ahead of schedule. The quality of materials and the spacious design exceeded our expectations. Truly a world-class experience."
+    review: "MRV Bench Marks delivered our corporate office ahead of schedule. The quality of materials and the spacious design exceeded our expectations. Truly a world-class experience.",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=150&auto=format&fit=crop"
   },
   {
     id: 2,
     name: "Anita Desai",
     role: "Director, Apex Holdings",
-    review: "The level of professionalism is unmatched. Their commitment to 'Timely Delivery' isn't just a marketing slogan; it's a promise they kept perfectly."
+    review: "The level of professionalism is unmatched. Their commitment to 'Timely Delivery' isn't just a marketing slogan; it's a promise they kept perfectly.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" 
   },
   {
     id: 3,
     name: "Karan Mehta",
     role: "Founder, Zenith Group",
-    review: "A build we can rely on. The elite materials and structural integrity give us complete peace of mind. Highly recommend their commercial real estate projects."
+    review: "A build we can rely on. The elite materials and structural integrity give us complete peace of mind. Highly recommend their commercial real estate projects.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop" 
   },
   {
     id: 4,
     name: "Priya Varma",
     role: "Managing Partner, Varma & Co.",
-    review: "The seamless integration of natural light and open-plan environments has significantly boosted our team's productivity. A brilliant architectural feat."
+    review: "The seamless integration of natural light and open-plan environments has significantly boosted our team's productivity. A brilliant architectural feat.",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=150&auto=format&fit=crop" 
   }
 ];
 
@@ -276,10 +283,14 @@ export function TestimonialsSection() {
             <div key={t.id} className={styles.testimonialCard}>
               <div className={styles.quoteIcon}>“</div>
               <p className={styles.reviewText}>{t.review}</p>
-              <div className={styles.reviewerInfo}>
-                <h5 className={styles.reviewerName}>{t.name}</h5>
-                <span className={styles.reviewerRole}>{t.role}</span>
+              <div className={styles.reviewerProfile}>
+                <img src={t.image} alt={t.name} className={styles.reviewerImage} />
+                <div className={styles.reviewerDetails}>
+                  <h5 className={styles.reviewerName}>{t.name}</h5>
+                  <span className={styles.reviewerRole}>{t.role}</span>
+                </div>
               </div>
+
             </div>
           ))}
         </div>
@@ -287,7 +298,6 @@ export function TestimonialsSection() {
     </div>
   );
 }
-
 // SECTION 7: FINAL CTA BLOCK
 export function CTASection() {
   return (

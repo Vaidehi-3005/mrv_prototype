@@ -23,7 +23,7 @@
   color: #111111;
   margin-bottom: 50px;
   letter-spacing: 0.5px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   text-align: center;
 }
 
@@ -135,26 +135,203 @@
 @keyframes rotateContinuous { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 .wheelCard:hover .arrowIndicator { animation-play-state: paused; }
 
-   /* 3. CREDENTIALS SECTION */
-.credsContainer { width: 100%; max-width: 1200px; padding: 80px 20px; text-align: center; margin-top: 60px; }
-.credsTitle { font-size: 42px; font-weight: 700; margin-bottom: 60px; }
-.credsGrid { display: flex; justify-content: center; gap: 80px; flex-wrap: wrap; }
-.credCard { width: 320px; display: flex; flex-direction: column; align-items: center; }
-.medalSvgWrapper { width: 220px; height: 220px; margin-bottom: 25px; }
-.medalSvg { width: 100%; height: 100%; filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)); }
 
-    
-/* 4. TESTIMONIALS SECTION */
-    
-.testimonialsContainer { width: 100%; max-width: 1200px; padding: 80px 20px; background-color: #f9f9f9; text-align: center; margin-top: 40px; border-radius: 40px; }
-.testimonialsTitle { font-size: 42px; margin-bottom: 50px; }
-.sliderWrapper { max-width: 100%; overflow: hidden; }
-.sliderTrack { display: flex; gap: 30px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
-.testimonialCard { flex: 0 0 350px; scroll-snap-align: center; background: #ffffff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: left; }
-.quoteIcon { font-size: 70px; color: #b89243; margin-bottom: 20px; }
+ /* =========================================
+   3. AWARDS & CREDENTIALS SECTION 
+   ========================================= */
+.credsContainer { 
+  width: 100%; 
+  max-width: 1200px; 
+  padding: 80px 20px; 
+  text-align: center; 
+  margin: 60px auto 0; 
+}
 
+.credsTitle { 
+  font-size: 42px; 
+  font-weight: 700; 
+  margin-bottom: 60px; 
+  color: #111111;
+}
 
+.credsGrid { 
+  display: flex; 
+  justify-content: center; 
+  gap: 80px; 
+  flex-wrap: wrap;
+}
 
+.credCard { 
+  width: 320px; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center;
+}
+
+.medalSvgWrapper { 
+  width: 150px; 
+  height: 150px; 
+  margin-bottom: 25px; 
+}
+
+.medalSvg { 
+  width: 100%; 
+  height: 100%; 
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.15)); 
+}
+
+.credCard h4 { 
+  font-size: 24px; 
+  font-weight: 700; 
+  color: #111111;
+  margin-bottom: 12px; 
+}
+
+.credCard p { 
+  font-size: 16px; 
+  color: #555555; 
+  line-height: 1.6; 
+}
+
+/* =========================================
+   MOBILE RESPONSIVE (3 Medals in 1 Line)
+   ========================================= */
+@media (max-width: 768px) {
+  .credsContainer {
+    padding: 50px 10px;
+    margin-top: 30px;
+  }
+  
+  .credsTitle {
+    font-size: 28px;
+    margin-bottom: 40px;
+  }
+
+  .credsGrid {
+    gap: 10px;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+  }
+
+  .credCard {
+    width: 33%; 
+    flex: 1; 
+  }
+
+  .medalSvgWrapper {
+    width: 75px; 
+    height: 75px;
+    margin-bottom: 15px;
+  }
+
+  .credCard h4 {
+    font-size: 14px; 
+    margin-bottom: 8px;
+  }
+
+  .credCard p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+}
+   /* =========================================
+   4. TESTIMONIALS SECTION (Perfect For All Devices)
+   ========================================= */
+.testimonialsContainer { 
+  width: 100%; 
+  max-width: 1200px; 
+  padding: 80px 20px; 
+  background-color: #f9f9f9; 
+  text-align: center; 
+  margin: 60px auto; /* PC par container ko bilkul center rakhega */
+  border-radius: 40px; 
+}
+
+.testimonialsTitle { 
+  font-size: 42px; 
+  margin-bottom: 50px; 
+  color: #111111;
+}
+
+.sliderWrapper { 
+  width: 100%; 
+  overflow: hidden; 
+}
+
+.sliderTrack { 
+  display: flex; 
+  gap: 30px; 
+  padding: 20px 10px;
+  overflow-x: auto; 
+  scroll-snap-type: x mandatory; 
+  scrollbar-width: none; /* Firefox ke liye scrollbar hide */
+  
+  /* Ye 2 lines PC par cards ko center mein align karne ka magic hain */
+  width: max-content; 
+  margin: 0 auto; 
+  max-width: 100%;
+}
+
+.sliderTrack::-webkit-scrollbar { 
+  display: none; /* Chrome/Safari ke liye scrollbar hide */
+}
+
+/* Original Premium Card Design */
+.testimonialCard { 
+  flex: 0 0 350px; /* Laptops & PC par original 350px size */
+  scroll-snap-align: center; 
+  background: #ffffff; 
+  padding: 40px 30px; 
+  border-radius: 20px; 
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+  text-align: left; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between; 
+}
+
+/* Profile Image & Text alignment (agar aapne pehle add kiya tha) */
+.quoteIcon { font-size: 70px; color: #b89243; margin-bottom: 20px; line-height: 0.5; font-family: Georgia, serif; }
+.reviewText { font-size: 16px; color: #555555; line-height: 1.7; margin-bottom: 30px; flex-grow: 1; }
+.reviewerProfile { display: flex; align-items: center; gap: 15px; border-top: 1px solid #eeeeee; padding-top: 20px; }
+.reviewerImage { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #f0f0f0; }
+.reviewerDetails { display: flex; flex-direction: column; }
+.reviewerName { font-size: 18px; font-weight: 700; color: #111111; margin: 0 0 5px 0; }
+.reviewerRole { font-size: 14px; color: #888888; }
+
+/* =========================================
+   RESPONSIVE ADJUSTMENTS (For Every Screen)
+   ========================================= */
+
+/* Laptops / Smaller PCs */
+@media (max-width: 1024px) {
+  .testimonialCard { 
+    flex: 0 0 320px; /* Screen choti hone par thoda size adjust */
+    padding: 30px 20px; 
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .testimonialsContainer { padding: 60px 15px; margin-top: 40px; }
+  .testimonialsTitle { font-size: 34px; margin-bottom: 40px; }
+  .testimonialCard { 
+    flex: 0 0 300px; 
+  }
+  .sliderTrack { 
+    margin: 0; /* Tablet par scroll free rakhne ke liye margin auto reset */
+    width: 100%; 
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .testimonialsTitle { font-size: 28px; margin-bottom: 30px; }
+  .testimonialCard { 
+    flex: 0 0 85vw; /* Mobile par perfect center, screen ka 85% cover karega */
+  }
+}
    /* 5. FINAL CTA BANNER (PASTEL PREMIUM LOOK) */
 .ctaContainer { 
   width: 100%; 
