@@ -120,17 +120,21 @@
 
 .arrowIndicator {
   position: absolute;
-  width: 450px; height: 450px;
+  width: 100%; 
+  height: 100%;
   border-radius: 50%;
   pointer-events: none;
   animation: rotateContinuous 25s linear infinite;
-  display: flex; justify-content: center; align-items: center;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
   z-index: 3;
 }
 
+.arrowTop { top: -15px; transform: rotate(90deg); }
+.arrowBottom { bottom: -15px; transform: rotate(-90deg); }
+
 .arrowTop, .arrowBottom { position: absolute; font-size: 18px; color: #333; font-weight: 800; }
-.arrowTop { top: -10px; transform: rotate(90deg); }
-.arrowBottom { bottom: -10px; transform: rotate(-90deg); }
 
 @keyframes rotateContinuous { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
 .wheelCard:hover .arrowIndicator { animation-play-state: paused; }

@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import  { useState,useEffect } from "react";
 import styles from "./InteractiveWheel.module.css"; 
 
 const itemsData = [
@@ -63,19 +63,37 @@ export default function InteractiveWheel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [rotation, setRotation] = useState(0);
 
-  const handleItemClick = (index) => {
-    const currentActiveAngle = itemsData[activeIndex].angle;
-    const clickedAngle = itemsData[index].angle;
+  const calculateRotation = (currentIndex, targetIndex) => {
+    const currentActiveAngle = itemsData[currentIndex].angle;
+    const targetAngle = itemsData[targetIndex].angle;
 
-   
-    let angleDifference = currentActiveAngle - clickedAngle;
+    let angleDifference = currentActiveAngle - targetAngle;
     if (angleDifference <= 0) {
       angleDifference += 360;
     }
+    return angleDifference;
+  };
 
-    setRotation((prev) => prev + angleDifference);
+  // Click Handler
+  const handleItemClick = (index) => {
+    const angleDiff = calculateRotation(activeIndex, index);
+    setRotation((prev) => prev + angleDiff);
     setActiveIndex(index);
   };
+
+  // Auto-rotation effect (40 seconds timeout)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const nextIndex = (activeIndex + 1) % itemsData.length;
+      const angleDiff = calculateRotation(activeIndex, nextIndex);
+      
+      setRotation((prev) => prev + angleDiff);
+      setActiveIndex(nextIndex);
+    }, 5000); // 5,000 milliseconds = 5 seconds
+
+    // Clear interval on component unmount or when activeIndex changes
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
   const activeData = itemsData[activeIndex];
 
